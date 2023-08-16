@@ -1,0 +1,18 @@
+*Tasks:*
+    1. *node classification*: predict a property of a node
+    2. *link prediction*: predict whether there are missing links between two nodes
+    3. *graph classification*: categorize different graphs 
+    4. *clustering*: detect if nodes form a community
+    5. *graph generation*
+    6. *graph evolution*
+
+Edge level ML:
+   * link prediction 
+
+Node-level feature 
+structure based features:
+    * node degree: counts the number of neighboring nodes
+    * clustering coefficient: measure how connect3ed neighboring nodes are  
+    * graphlet degree vector: counts the occurences of different graphlets
+
+
