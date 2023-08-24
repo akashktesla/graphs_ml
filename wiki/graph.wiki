@@ -6,13 +6,52 @@
     5. *graph generation*
     6. *graph evolution*
 
-Edge level ML:
+*Edge level ML:*
    * link prediction 
 
-Node-level feature 
-structure based features:
+*Node-level feature* 
+*structure based features:*
     * node degree: counts the number of neighboring nodes
     * clustering coefficient: measure how connect3ed neighboring nodes are  
     * graphlet degree vector: counts the occurences of different graphlets
 
 
+*Link prediction tasks:*
+    * predict new link based on existing links
+    * the key is to design features for pair of nodes
+
+    1. Links missing at random: remove a set of links and aim to predict them (for static networks where number of nodes doesn't change)
+    2. Links over time: given g[t0,t'0] predict the graph g[t1,t'1] (for dynammic networks)
+
+*Methodology* 
+    * for each pair of node (x,y) compute score c(x,y)
+    * sort pairs(x,y) by the score (descending) 
+    * predict ton n pairs as new links
+
+    *Distancd-based features:*
+        * uses the shortest path length between two nodes but does not capture how neighborhood overlaps
+    *Local neighborhood overlaps:* 
+        * captures neighboring nodes shared between two nodes v1 and v2
+        * common neighbors: |N(v1) ^ N(v2) |
+        * jaccard's coefficient: |N(v1) ^ N(v2)| / |N(v1) U N(v2)| ( kinda like normalizing common neighbors)
+        * Adamic-adar index: sum of neighbors in common ***1/log(ku)
+        
+    *Global neighborhood overlap:* 
+        * katz index: count the number of paths of all lenghts between a given pair of nodes
+        * auv^l pecifies paths of length l
+        * katz index = sum of(1 to inf)(beta\^l* (av1v2)\^l)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
