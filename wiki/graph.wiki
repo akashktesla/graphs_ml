@@ -42,4 +42,18 @@
         * katz index = sum of(1 to inf)(beta\^l* (av1v2)\^l)
 
 
+*Graph level features*
+*goal:* features that characterize the structure of an entire graph
 
+*Kernel methods*: widely used for traditional ML for graph-level prediction
+    * design kernals instead of feature vectors
+    *  kernal measures similary b/w data
+    * kernel matrix must always be positive semidefinite
+    * bag of words, bag of node degrees(represents pattern ig)
+    graphlet kernel:
+        * count the number of different graphlets in a graph
+        * exponential complexity
+    weisfeler-lehman kernal
+        * design an efficient graph feature descriptor 
+        * use neighborhood structure to interatively enrich node vocabulary
+        color refinement: 
