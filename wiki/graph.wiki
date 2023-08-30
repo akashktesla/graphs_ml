@@ -57,3 +57,7 @@
         * design an efficient graph feature descriptor 
         * use neighborhood structure to interatively enrich node vocabulary
         color refinement: 
+
+Encoder + Decoder framework
+    * shallow encoder: embedding lookup
+    * decoder: based on node similarity
